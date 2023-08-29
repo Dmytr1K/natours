@@ -24,6 +24,8 @@ body {
 }
 
 .header {
+  position: relative;
+
   height: 95vh;
 
   background-image:
@@ -33,4 +35,15 @@ body {
   background-position: top;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+
+  left: 40px;
+  top: 40px;
+}
+
+.logo {
+  height: 35px;
 }
