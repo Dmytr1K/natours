@@ -62,3 +62,30 @@ input[type="radio"].visually-hidden {
 .logo {
   height: 35px;
 }
+
+.content-box {
+  position: absolute;
+
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.slogan {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.slogan-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.slogan-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+}
