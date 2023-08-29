@@ -1,0 +1,11 @@
+\!n/
+
+.idea/
+.vscode/
+
+node_modules/
+
+*.fig
+*.log
+*.pdf
+*.psd
