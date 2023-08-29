@@ -5,3 +5,10 @@ COLORS:
   Dark green: #28b485
 
 */
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
