@@ -135,8 +135,26 @@ input[type="radio"].visually-hidden {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  80% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .btn {
   display: inline-block;
+
+  position: relative;
 
   border-radius: 50px;
   padding: 15px 40px;
@@ -174,4 +192,37 @@ input[type="radio"].visually-hidden {
 .btn-white {
   background-color: #ffffff;
   color: #777777
+}
+
+.btn::after {
+  display: inline-block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  border-radius: 1000px;
+
+  content: "";
+
+  height: 100%;
+  width: 100%;
+
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #ffffff;
+}
+
+.btn:focus::after,
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.7s ease-out 0.5s;
+  animation-fill-mode: backwards;
 }
