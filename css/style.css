@@ -14,8 +14,8 @@ COLORS:
 }
 
 html {
-  /* 1rem = 10px */
-  font-size: 10px;
+  /* 1rem = 10px = (16px * 0.625) */
+  font-size: 62.5%;
 }
 
 body {
