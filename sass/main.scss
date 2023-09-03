@@ -1,10 +1,11 @@
-/*
-COLORS:
-  Light green: #7ed56f
-  Medium green: #55c57a
-  Dark green: #28b485
+// COLORS
+$color-primary-dark: #28b485;
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
 
-*/
+$color-black: #000000;
+$color-grey-dark: #777777;
+$color-white: #ffffff;
 
 .page {
   box-sizing: border-box;
@@ -25,7 +26,7 @@ COLORS:
 .page-body {
   padding: 3.6rem;
 
-  color: #777;
+  color: $color-grey-dark;
 
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -60,7 +61,9 @@ input[type="radio"].visually-hidden {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   background-image:
-    linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)),
+    linear-gradient(to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)),
     url("../img/hero/hero.jpg");
   background-size: cover;
   background-position: top;
@@ -91,7 +94,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slogan {
-  color: #ffffff;
+  color: $color-white;
 
   text-transform: uppercase;
 
@@ -206,18 +209,18 @@ input[type="radio"].visually-hidden {
 .btn:hover {
   transform: translateY(-0.3rem);
 
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 }
 
 .btn:active {
   transform: translateY(-0.1rem);
 
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
 }
 
 .btn_white {
-  background-color: #ffffff;
-  color: #777777
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 
 .btn::after {
@@ -239,7 +242,7 @@ input[type="radio"].visually-hidden {
 }
 
 .btn_white::after {
-  background-color: #ffffff;
+  background-color: $color-white;
 }
 
 .btn:focus::after,
