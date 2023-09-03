@@ -49,52 +49,52 @@ input[type="radio"].visually-hidden {
   background-position: top;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
 
-.main-header__logo-wrapper {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo-wrapper {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.main-header__logo {
-  height: 3.5rem;
-}
+  &__logo {
+    height: 3.5rem;
+  }
 
-.main-header__content-wrapper {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
+  &__content-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
 
-.main-header__slogan {
-  margin-bottom: 6rem;
+  &__slogan {
+    margin-bottom: 6rem;
+  }
 }
 
 .slogan {
   backface-visibility: hidden; // fix shaking text in the animation
   color: $color-white;
   text-transform: uppercase;
-}
 
-.slogan_main {
-  display: block;
-  animation: moveInLeft 1s ease-out;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  text-indent: 3.5rem; // fix wrong text center alignment with letter-spacing
-}
+  &_main {
+    display: block;
+    animation: moveInLeft 1s ease-out;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    text-indent: 3.5rem; // fix wrong text center alignment with letter-spacing
+  }
 
-.slogan_sub {
-  display: block;
-  animation: moveInRight 1s ease-out;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  text-indent: 1.75rem; // fix wrong text center alignment with letter-spacing
+  &_sub {
+    display: block;
+    animation: moveInRight 1s ease-out;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    text-indent: 1.75rem; // fix wrong text center alignment with letter-spacing
+  }
 }
 
 @keyframes moveInLeft {
@@ -154,9 +154,8 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.2s;
-}
 
-/*
+  /*
  * :link - unvisited link;
  * :visited - visited link;
  * :focus - link is focused;
@@ -164,53 +163,54 @@ input[type="radio"].visually-hidden {
  * :active - mouse click on link
 */
 
-/* .btn:link,
+  /* .btn:link,
    .btn:visited {} */
 
-.btn:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+  }
 
-.btn:focus,
-.btn:hover {
-  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-  transform: translateY(-0.3rem);
-}
+  &:focus,
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-0.3rem);
+  }
 
-.btn:active {
-  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-  transform: translateY(-0.1rem);
-}
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    transform: translateY(-0.1rem);
+  }
 
-.btn_white {
-  background-color: $color-white;
-  color: $color-grey-dark;
-}
+  &_white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+  }
 
-.btn::after {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: 100rem;
-  content: "";
-  transition: all 0.4s;
-}
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100rem;
+    content: "";
+    transition: all 0.4s;
+  }
 
-.btn_white::after {
-  background-color: $color-white;
-}
+  &_white::after {
+    background-color: $color-white;
+  }
 
-.btn:focus::after,
-.btn:hover::after {
-  opacity: 0;
-  transform: scaleX(1.4) scaleY(1.6);
-}
+  &:focus::after,
+  &:hover::after {
+    opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6);
+  }
 
-.btn_animated {
-  animation: moveInBottom 0.7s ease-out 0.5s;
-  animation-fill-mode: backwards;
+  &_animated {
+    animation: moveInBottom 0.7s ease-out 0.5s;
+    animation-fill-mode: backwards;
+  }
 }
