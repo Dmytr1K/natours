@@ -1,78 +1,60 @@
-// COLORS
 $color-primary-dark: #28b485;
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
-
-$color-black: #000000;
-$color-grey-dark: #777777;
-$color-white: #ffffff;
+$color-black: #000;
+$color-grey-dark: #777;
+$color-white: #fff;
 
 .page {
   box-sizing: border-box;
-
-  /* 1rem = 10px = (16px * 0.625) */
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px = (16px * 0.625)
 }
 
 *,
 *::after,
 *::before {
   box-sizing: inherit;
-
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .page-body {
   padding: 3.6rem;
-
   color: $color-grey-dark;
-
-  font-family: "Lato", sans-serif;
+  font-family: Lato, sans-serif;
   font-weight: 400;
-
   line-height: 1.7;
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden:not(:focus, :active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-
-  height: 1px;
+  overflow: hidden;
   width: 1px;
-
-  margin: -1px;
+  height: 1px;
   padding: 0;
   border: 0;
-
-  overflow: hidden;
-  white-space: nowrap;
-
-  clip-path: inset(100%);
+  margin: -1px;
   clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
 }
 
 .main-header {
   position: relative;
-
   height: 95vh;
-
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-
-  background-image:
-    linear-gradient(to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)),
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
     url("../img/hero/hero.jpg");
-  background-size: cover;
   background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .main-header__logo-wrapper {
   position: absolute;
-  left: 4rem;
   top: 4rem;
+  left: 4rem;
 }
 
 .main-header__logo {
@@ -81,12 +63,10 @@ input[type="radio"].visually-hidden {
 
 .main-header__content-wrapper {
   position: absolute;
-  left: 50%;
   top: 40%;
-
-  transform: translate(-50%, -50%);
-
+  left: 50%;
   text-align: center;
+  transform: translate(-50%, -50%);
 }
 
 .main-header__slogan {
@@ -94,38 +74,27 @@ input[type="radio"].visually-hidden {
 }
 
 .slogan {
+  backface-visibility: hidden; // fix shaking text in the animation
   color: $color-white;
-
   text-transform: uppercase;
-
-  /* fix shaking text in the animation */
-  backface-visibility: hidden;
 }
 
 .slogan_main {
   display: block;
-
+  animation: moveInLeft 1s ease-out;
   font-size: 6rem;
   font-weight: 400;
-
   letter-spacing: 3.5rem;
-  /* fix wrong text center alignment with letter-spacing */
-  text-indent: 3.5rem;
-
-  animation: moveInLeft 1s ease-out;
+  text-indent: 3.5rem; // fix wrong text center alignment with letter-spacing
 }
 
 .slogan_sub {
   display: block;
-
+  animation: moveInRight 1s ease-out;
   font-size: 2rem;
   font-weight: 700;
-
   letter-spacing: 1.75rem;
-  /* fix wrong text center alignment with letter-spacing */
-  text-indent: 1.75rem;
-
-  animation: moveInRight 1s ease-out;
+  text-indent: 1.75rem; // fix wrong text center alignment with letter-spacing
 }
 
 @keyframes moveInLeft {
@@ -178,16 +147,12 @@ input[type="radio"].visually-hidden {
 
 .btn {
   position: relative;
-
   display: inline-block;
-
   padding: 1.5rem 4rem;
   border-radius: 100rem;
-
   font-size: 1.6rem;
   text-decoration: none;
   text-transform: uppercase;
-
   transition: all 0.2s;
 }
 
@@ -198,6 +163,7 @@ input[type="radio"].visually-hidden {
  * :hover - mouse over link;
  * :active - mouse click on link
 */
+
 /* .btn:link,
    .btn:visited {} */
 
@@ -207,15 +173,13 @@ input[type="radio"].visually-hidden {
 
 .btn:focus,
 .btn:hover {
-  transform: translateY(-0.3rem);
-
   box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  transform: translateY(-0.3rem);
 }
 
 .btn:active {
-  transform: translateY(-0.1rem);
-
   box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  transform: translateY(-0.1rem);
 }
 
 .btn_white {
@@ -224,20 +188,15 @@ input[type="radio"].visually-hidden {
 }
 
 .btn::after {
-  content: "";
-
   position: absolute;
-  left: 0;
-  top: 0;
-
   z-index: -1;
-
+  top: 0;
+  left: 0;
   display: inline-block;
-
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 100rem;
-
+  content: "";
   transition: all 0.4s;
 }
 

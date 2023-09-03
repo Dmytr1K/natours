@@ -1,85 +1,81 @@
 .page {
   box-sizing: border-box;
-  /* 1rem = 10px = (16px * 0.625) */
   font-size: 62.5%; }
 
 *,
 *::after,
 *::before {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 .page-body {
   padding: 3.6rem;
-  color: #777777;
-  font-family: "Lato", sans-serif;
+  color: #777;
+  font-family: Lato, sans-serif;
   font-weight: 400;
   line-height: 1.7; }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden:not(:focus, :active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
-  height: 1px;
+  overflow: hidden;
   width: 1px;
-  margin: -1px;
+  height: 1px;
   padding: 0;
   border: 0;
-  overflow: hidden;
-  white-space: nowrap;
+  margin: -1px;
+  clip: rect(0 0 0 0);
   clip-path: inset(100%);
-  clip: rect(0 0 0 0); }
+  white-space: nowrap; }
 
 .main-header {
   position: relative;
   height: 95vh;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero/hero.jpg");
+  background-position: top;
   background-size: cover;
-  background-position: top; }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
 .main-header__logo-wrapper {
   position: absolute;
-  left: 4rem;
-  top: 4rem; }
+  top: 4rem;
+  left: 4rem; }
 
 .main-header__logo {
   height: 3.5rem; }
 
 .main-header__content-wrapper {
   position: absolute;
-  left: 50%;
   top: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%); }
 
 .main-header__slogan {
   margin-bottom: 6rem; }
 
 .slogan {
-  color: #ffffff;
-  text-transform: uppercase;
-  /* fix shaking text in the animation */
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  color: #fff;
+  text-transform: uppercase; }
 
 .slogan_main {
   display: block;
+  animation: moveInLeft 1s ease-out;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
-  /* fix wrong text center alignment with letter-spacing */
-  text-indent: 3.5rem;
-  animation: moveInLeft 1s ease-out; }
+  text-indent: 3.5rem; }
 
 .slogan_sub {
   display: block;
+  animation: moveInRight 1s ease-out;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
-  /* fix wrong text center alignment with letter-spacing */
-  text-indent: 1.75rem;
-  animation: moveInRight 1s ease-out; }
+  text-indent: 1.75rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -135,31 +131,31 @@ input[type="radio"].visually-hidden {
 
 .btn:focus,
 .btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem); }
 
 .btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1rem); }
 
 .btn_white {
-  background-color: #ffffff;
-  color: #777777; }
+  background-color: #fff;
+  color: #777; }
 
 .btn::after {
-  content: "";
   position: absolute;
-  left: 0;
-  top: 0;
   z-index: -1;
+  top: 0;
+  left: 0;
   display: inline-block;
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 100rem;
+  content: "";
   transition: all 0.4s; }
 
 .btn_white::after {
-  background-color: #ffffff; }
+  background-color: #fff; }
 
 .btn:focus::after,
 .btn:hover::after {
