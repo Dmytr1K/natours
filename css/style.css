@@ -58,20 +58,20 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase; }
   .slogan_main {
     display: block;
-    animation: moveInLeft 1s ease-out;
+    animation: move-in-left 1s ease-out;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
     text-indent: 3.5rem; }
   .slogan_sub {
     display: block;
-    animation: moveInRight 1s ease-out;
+    animation: move-in-right 1s ease-out;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     text-indent: 1.75rem; }
 
-@keyframes moveInLeft {
+@keyframes move-in-left {
   0% {
     opacity: 0;
     transform: translateX(-10rem); }
@@ -81,7 +81,7 @@ input[type="radio"].visually-hidden {
     opacity: 1;
     transform: translateX(0); } }
 
-@keyframes moveInRight {
+@keyframes move-in-right {
   0% {
     opacity: 0;
     transform: translateX(10rem); }
@@ -91,7 +91,7 @@ input[type="radio"].visually-hidden {
     opacity: 1;
     transform: translateX(0); } }
 
-@keyframes moveInBottom {
+@keyframes move-in-bottom {
   0% {
     opacity: 0;
     transform: translateY(3rem); }
@@ -109,27 +109,7 @@ input[type="radio"].visually-hidden {
   font-size: 1.6rem;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.2s;
-  /*
- * :link - unvisited link;
- * :visited - visited link;
- * :focus - link is focused;
- * :hover - mouse over link;
- * :active - mouse click on link
-*/
-  /* .btn:link,
-   .btn:visited {} */ }
-  .btn:focus {
-    outline: none; }
-  .btn:focus, .btn:hover {
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    transform: translateY(-0.3rem); }
-  .btn:active {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    transform: translateY(-0.1rem); }
-  .btn_white {
-    background-color: #fff;
-    color: #777; }
+  transition: all 0.2s; }
   .btn::after {
     position: absolute;
     z-index: -1;
@@ -141,11 +121,22 @@ input[type="radio"].visually-hidden {
     border-radius: 100rem;
     content: "";
     transition: all 0.4s; }
-  .btn_white::after {
-    background-color: #fff; }
+  .btn:focus {
+    outline: none; }
+  .btn:focus, .btn:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3rem); }
   .btn:focus::after, .btn:hover::after {
     opacity: 0;
     transform: scaleX(1.4) scaleY(1.6); }
+  .btn:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.1rem); }
+  .btn_white {
+    background-color: #fff;
+    color: #777; }
+    .btn_white::after {
+      background-color: #fff; }
   .btn_animated {
-    animation: moveInBottom 0.7s ease-out 0.5s;
+    animation: move-in-bottom 0.7s ease-out 0.5s;
     animation-fill-mode: backwards; }

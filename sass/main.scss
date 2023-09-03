@@ -80,7 +80,7 @@ input[type="radio"].visually-hidden {
 
   &_main {
     display: block;
-    animation: moveInLeft 1s ease-out;
+    animation: move-in-left 1s ease-out;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
@@ -89,7 +89,7 @@ input[type="radio"].visually-hidden {
 
   &_sub {
     display: block;
-    animation: moveInRight 1s ease-out;
+    animation: move-in-right 1s ease-out;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
@@ -97,7 +97,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-@keyframes moveInLeft {
+@keyframes move-in-left {
   0% {
     opacity: 0;
     transform: translateX(-10rem);
@@ -113,7 +113,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-@keyframes moveInRight {
+@keyframes move-in-right {
   0% {
     opacity: 0;
     transform: translateX(10rem);
@@ -129,7 +129,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-@keyframes moveInBottom {
+@keyframes move-in-bottom {
   0% {
     opacity: 0;
     transform: translateY(3rem);
@@ -155,37 +155,6 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   transition: all 0.2s;
 
-  /*
- * :link - unvisited link;
- * :visited - visited link;
- * :focus - link is focused;
- * :hover - mouse over link;
- * :active - mouse click on link
-*/
-
-  /* .btn:link,
-   .btn:visited {} */
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus,
-  &:hover {
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-    transform: translateY(-0.3rem);
-  }
-
-  &:active {
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-    transform: translateY(-0.1rem);
-  }
-
-  &_white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-  }
-
   &::after {
     position: absolute;
     z-index: -1;
@@ -199,8 +168,14 @@ input[type="radio"].visually-hidden {
     transition: all 0.4s;
   }
 
-  &_white::after {
-    background-color: $color-white;
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-0.3rem);
   }
 
   &:focus::after,
@@ -209,8 +184,22 @@ input[type="radio"].visually-hidden {
     transform: scaleX(1.4) scaleY(1.6);
   }
 
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    transform: translateY(-0.1rem);
+  }
+
+  &_white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
   &_animated {
-    animation: moveInBottom 0.7s ease-out 0.5s;
+    animation: move-in-bottom 0.7s ease-out 0.5s;
     animation-fill-mode: backwards;
   }
 }
