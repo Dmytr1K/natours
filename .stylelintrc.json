@@ -1,14 +1,11 @@
 {
-  "extends": [
-    "stylelint-config-idiomatic-order",
-    "stylelint-config-standard-scss"
-  ],
   "plugins": [
     "stylelint-order",
-    "stylelint-prettier",
     "stylelint-scss"
   ],
-  "rules": {
-    "prettier/prettier": true
-  }
+  "extends": [
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-standard-scss",
+    "stylelint-prettier/recommended"
+  ]
 }
