@@ -1,76 +1,4 @@
-.page {
-  box-sizing: border-box;
-  font-size: 62.5%; }
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0; }
-
-.page-body {
-  padding: 3.6rem;
-  color: #777;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  line-height: 1.7; }
-
-.visually-hidden:not(:focus, :active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  white-space: nowrap; }
-
-.main-header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero/hero.jpg");
-  background-position: top;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .main-header__logo-wrapper {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .main-header__logo {
-    height: 3.5rem; }
-  .main-header__content-wrapper {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%); }
-  .main-header__slogan {
-    margin-bottom: 6rem; }
-
-.slogan {
-  backface-visibility: hidden;
-  color: #fff;
-  text-transform: uppercase; }
-  .slogan_main {
-    display: block;
-    animation: move-in-left 1s ease-out;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    text-indent: 3.5rem; }
-  .slogan_sub {
-    display: block;
-    animation: move-in-right 1s ease-out;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    text-indent: 1.75rem; }
-
+/* stylelint-disable scss/dollar-variable-empty-line-before */
 @keyframes move-in-left {
   0% {
     opacity: 0;
@@ -100,6 +28,64 @@ input[type="radio"].visually-hidden {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+.page {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+.page-body {
+  padding: 3.6rem; }
+
+.visually-hidden:not(:focus, :active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap; }
+
+.page {
+  font-size: 62.5%; }
+
+.page-body {
+  color: #777;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  line-height: 1.7; }
+
+.main-header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero/hero.jpg");
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .main-header__logo-wrapper {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .main-header__logo {
+    height: 3.5rem; }
+  .main-header__content-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
+  .main-header__slogan {
+    margin-bottom: 6rem; }
 
 .btn {
   position: relative;
@@ -140,3 +126,22 @@ input[type="radio"].visually-hidden {
   .btn_animated {
     animation: move-in-bottom 0.7s ease-out 0.5s;
     animation-fill-mode: backwards; }
+
+.slogan {
+  backface-visibility: hidden;
+  color: #fff;
+  text-transform: uppercase; }
+  .slogan_main {
+    display: block;
+    animation: move-in-left 1s ease-out;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    text-indent: 3.5rem; }
+  .slogan_sub {
+    display: block;
+    animation: move-in-right 1s ease-out;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    text-indent: 1.75rem; }

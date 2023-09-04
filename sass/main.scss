@@ -1,205 +1,30 @@
-$color-primary-dark: #28b485;
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-black: #000;
-$color-grey-dark: #777;
-$color-white: #fff;
+// # The 7–1 Sass Architecture
 
-.page {
-  box-sizing: border-box;
-  font-size: 62.5%; // 1rem = 10px = (16px * 0.625)
-}
+// # abstracts
+@import "abstracts/variables";
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
-}
+// @import "abstracts/functions";
+// @import "abstracts/mixins";
 
-.page-body {
-  padding: 3.6rem;
-  color: $color-grey-dark;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-}
+// # vendors
+// vendors absent
 
-.visually-hidden:not(:focus, :active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  white-space: nowrap;
-}
+// # base
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
 
-.main-header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
-    url("../img/hero/hero.jpg");
-  background-position: top;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+// @import "base/utilities";
 
-  &__logo-wrapper {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-  }
+// # layout
+@import "layout/main-header";
 
-  &__logo {
-    height: 3.5rem;
-  }
+// # components
+@import "components/button";
+@import "components/slogan";
 
-  &__content-wrapper {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-  }
+// # pages
+// @import "pages/home";
 
-  &__slogan {
-    margin-bottom: 6rem;
-  }
-}
-
-.slogan {
-  backface-visibility: hidden; // fix shaking text in the animation
-  color: $color-white;
-  text-transform: uppercase;
-
-  &_main {
-    display: block;
-    animation: move-in-left 1s ease-out;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    text-indent: 3.5rem; // fix wrong text center alignment with letter-spacing
-  }
-
-  &_sub {
-    display: block;
-    animation: move-in-right 1s ease-out;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    text-indent: 1.75rem; // fix wrong text center alignment with letter-spacing
-  }
-}
-
-@keyframes move-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-
-  80% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes move-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  80% {
-    transform: translateX(-1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes move-in-bottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  80% {
-    transform: translateY(-0.3rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.btn {
-  position: relative;
-  display: inline-block;
-  padding: 1.5rem 4rem;
-  border-radius: 100rem;
-  font-size: 1.6rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.2s;
-
-  &::after {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 100rem;
-    content: "";
-    transition: all 0.4s;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus,
-  &:hover {
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-    transform: translateY(-0.3rem);
-  }
-
-  &:focus::after,
-  &:hover::after {
-    opacity: 0;
-    transform: scaleX(1.4) scaleY(1.6);
-  }
-
-  &:active {
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-    transform: translateY(-0.1rem);
-  }
-
-  &_white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-
-    &::after {
-      background-color: $color-white;
-    }
-  }
-
-  &_animated {
-    animation: move-in-bottom 0.7s ease-out 0.5s;
-    animation-fill-mode: backwards;
-  }
-}
+// # themes
+// themes absent
