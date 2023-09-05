@@ -1,31 +1,32 @@
 // # The 7–1 Sass Architecture
 
-// # abstracts
+// * Abstracts
+@import "abstracts/animations";
+@import "abstracts/helpers";
 @import "abstracts/variables";
 
 // @import "abstracts/functions";
 // @import "abstracts/mixins";
 
-// # vendors
+// * Vendors
 @import "vendors/normalize";
 
-// # base
-@import "base/animations";
+// * Base
 @import "base/base";
 @import "base/typography";
 
 // @import "base/utilities";
 
-// # layout
+// * Layout
 @import "layout/main-header";
 
-// # components
+// * Components
 @import "components/button";
 @import "components/slogan";
 
-// # pages
+// * Pages
 // @import "pages/home";
 
-// # themes
+// * Themes
 // @import "themes/blue-theme";
 // @import "themes/green-theme";

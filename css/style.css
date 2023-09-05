@@ -1,3 +1,52 @@
+@keyframes move-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes move-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes move-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  80% {
+    transform: translateY(-0.3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.hidden,
+[hidden] {
+  display: none !important; }
+
+.invisible {
+  visibility: hidden; }
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap; }
+
 /* stylelint-disable scss/dollar-variable-empty-line-before */
 /* stylelint-disable font-family-no-duplicate-names */
 /* stylelint-disable order/properties-order */
@@ -157,8 +206,8 @@ textarea {
  */
 button,
 input {
-  /* 1 */
-  overflow: visible; }
+  overflow: visible;
+  /* 1 */ }
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -166,8 +215,8 @@ input {
  */
 button,
 select {
-  /* 1 */
-  text-transform: none; }
+  text-transform: none;
+  /* 1 */ }
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
@@ -307,36 +356,6 @@ template {
 [hidden] {
   display: none; }
 
-@keyframes move-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes move-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes move-in-bottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  80% {
-    transform: translateY(-0.3rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
 .page {
   box-sizing: border-box;
   font-size: 62.5%; }
@@ -350,25 +369,6 @@ template {
 
 .page-body {
   padding: 3.6rem; }
-
-.hidden,
-[hidden] {
-  display: none !important; }
-
-.invisible {
-  visibility: hidden; }
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  white-space: nowrap; }
 
 .page-body {
   color: #777;

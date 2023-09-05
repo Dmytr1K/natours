@@ -19,30 +19,3 @@
 .page-body {
   padding: 3.6rem;
 }
-
-// # Helper classes
-
-// * Hide visually and from screen readers
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-// * Hide visually and from screen readers, but maintain layout
-.invisible {
-  visibility: hidden;
-}
-
-// * Hide only visually, but have it available for screen readers
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  white-space: nowrap;
-}
