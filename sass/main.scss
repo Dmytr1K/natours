@@ -1,14 +1,14 @@
 // # The 7–1 Sass Architecture
 
-// * Vendors
-@import "vendors/normalize";
-
 // * Abstracts
 @import "abstracts/animations";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
 // @import "abstracts/functions";
+
+// * Vendors
+@import "vendors/normalize";
 
 // * Base
 @import "base/base";
