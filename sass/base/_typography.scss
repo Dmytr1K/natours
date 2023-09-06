@@ -6,3 +6,7 @@
   font-weight: 400;
   line-height: 1.7;
 }
+
+.heading-1st-level {
+  @include visually-hidden;
+}
