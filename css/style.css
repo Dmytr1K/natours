@@ -385,6 +385,12 @@ template {
 .u-center-text {
   text-align: center; }
 
+.u-margin-bottom-6 {
+  margin-bottom: 6rem; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -430,8 +436,6 @@ template {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%); }
-  .main-header__slogan {
-    margin-bottom: 6rem; }
 
 .btn {
   position: relative;
