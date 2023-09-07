@@ -4,10 +4,38 @@
   text-align: center;
 }
 
-.u-margin-bottom-6 {
+// # mb - margin-bottom
+// * 0 - zero
+.u-mb-0 {
+  margin-bottom: 0;
+}
+
+// * xs - extra small
+.u-mb-xs {
+  margin-bottom: 0.8rem;
+}
+
+// * sm - small
+.u-mb-sm {
+  margin-bottom: 1.5rem;
+}
+
+// * md - medium
+.u-mb-md {
+  margin-bottom: 4rem;
+}
+
+// * lg - large
+.u-mb-lg {
   margin-bottom: 6rem;
 }
 
-.u-margin-bottom-8 {
+// * xl - extra large
+.u-mb-xl {
   margin-bottom: 8rem;
+}
+
+// * xxl - extra extra large
+u-mb-xxl {
+  margin-bottom: 10rem;
 }
