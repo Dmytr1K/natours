@@ -57,3 +57,30 @@
     animation-fill-mode: backwards;
   }
 }
+
+.btn-text {
+  display: inline-block;
+  padding: 0.3rem;
+  border-bottom: 0.1rem solid $color-primary;
+  color: $color-primary;
+  font-size: $default-font-size;
+  text-decoration: none;
+  transition: all 0.2s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    color: $color-white;
+    transform: translateY(-0.2rem);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(-0.1rem);
+  }
+}
