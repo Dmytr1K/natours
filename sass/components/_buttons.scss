@@ -1,4 +1,6 @@
-// * Button
+// * Buttons
+
+// * Colored filled rounded button
 .btn {
   position: relative;
   display: inline-block;
@@ -43,6 +45,7 @@
     transform: translateY(-0.1rem);
   }
 
+  // * White button
   &_white {
     background-color: $color-white;
     color: $color-grey-dark;
@@ -52,12 +55,23 @@
     }
   }
 
+  // * Green button
+  &_green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   &_animated {
     animation: move-in-bottom 0.7s ease-out 0.5s;
     animation-fill-mode: backwards;
   }
 }
 
+// Rectangular text button
 .btn-text {
   display: inline-block;
   padding: 0.3rem;
